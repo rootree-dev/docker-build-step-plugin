@@ -160,7 +160,6 @@ public class CreateContainerCommand extends DockerCommand {
         }
         cfgCmd.withHostName(hostNameRes);
         cfgCmd.withName(containerNameRes);
-        HostConfig hc = new HostConfig();
         cfgCmd.withLinks(linksRes.getLinks());
         if (!envVarsRes.isEmpty()) {
             String[] encVarResSlitted = envVarsRes.split("\\r?\\n");
